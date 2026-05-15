@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+    <h1>Java Script Code</h1>
+    <body>
+        <h3>operators</h3>
+        <p id="demo"></p>
+
+        <script>
+            let x=10;
+            let y=5;
+            let z=x+y;
+            document.getElementById("demo").innerHTML = z;
+        </script>
+        <h3>if condition</h3>
+        <p id="sample"></p>
+        <script>
+            let age= 18;
+            let text="you are drive";
+
+            if(age>=18);{
+            text="you can not drive";
+            }
+            document.getElementById("sample").innerHTML= text;
+            
+        </script>
+        <h3>loops</h3>
+        <p id="simple"></p>
+        <script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let texts = "";
+for (let i = 0; i < cars.length; i++) {
+  texts += cars[i] + "<br>";
+}
+
+document.getElementById("simple").innerHTML = texts;
+</script>
+<h3>for loop</h3>
+<p id="demos"></p>
+<script>
+    let Text =" ";
+    for(let i=0;i<=5;i++){
+        Text+="the number is"+ i + "<br>";
+    }
+    document.getElementById("demos").innerHTML=Text;
+
+</script>
+<h3>while loops</h3>
+<p id="class" ></p>
+<script>
+    let tex="";
+    let i=0;
+    while(i<=10){
+        tex+="the numb is"+i+"<br>";
+        i++;
+    }
+    document.getElementById("class").innerHTML=tex;
+</script>
+<h3>do while</h3>
+<p id="do"></p>
+<script>
+    let textss="";
+    let a=0;
+
+    do{
+        textss+="the num "+ a+"<br>";
+        a++;
+    }
+    while(a<=5);
+    document.getElementById("do").innerHTML=textss;
+</script>
+<p id="abc"></p>
+<script>
+    function myFunction(p1,p2){
+        return p1*p2;
+    }
+    let result =myFunction(4,3);
+    document.getElementById("abc").innerHTML="the reult is"+ result;
+    
+</script>
+<p id="cde"></p>
+<script>
+    let header = "Template Strings";
+let tags = ["template strings", "javascript", "es6"];
+
+let html = "<h2>${header}</h2><ul>";
+
+for (const x of tags) {
+  html += "<li>${x}</li>";
+}
+
+html += "</ul>";
+document.getElementById("cde").innerHTML = html;
+</script>
+<p id="aabc"></p>
+<script>
+    let xy="nvbcmxzklkajshdgdfqwertyuioplkjhgfd";
+    document.getElementById("aabc").innerHTML= xy.length;
+</script>
+<p id="abbc"></p>
+<script>
+    let texxt="Hi Today is Monday";
+    document.getElementById("abbc").innerHTML=texxt.charAt(12);
+</script>
+<p id="abcc"></p>
+<script>
+    let n="Hi Today is Monday";
+    document.getElementById("abcc").innerHTML=n.charCodeAt(12);
+</script>
+<p id="good"></p>
+<script>
+    let xyz="HELLO MY WORLD";
+    document.getElementById("good").innerHTML=xyz.codePointAt(8);
+</script>
+<button onclick="showmessage()">click</button>
+<p id="switch"></p>
+<script>
+    function showmessage(){
+    document.getElementById("switch").innerHTML="button clicked";
+    }
+</script>
+<input type="text" id="name">
+<button onclick="displayname()">submit</button>
+<p id="mass"></p>
+<script>
+    function displayname(){
+      let username= document.getElementById("name").value;
+        document.getElementById("mass").innerHTML=username;
+    }
+</script>
+<button onclick="showalertmessage()" >submit</button>
+<script>
+    function showalertmessage(){
+        alert("Submited.!");
+    }
+</script>
+<p id="dem"></p>
+
+<script>
+let textt = "Hello world!";
+let results = textt.repeat(3);
+
+document.getElementById("dem").innerHTML = results;
+</script>
+<p id="change">Welcome to microsoft office</p>
+<script>
+    let doc = document.getElementById("change").innerHTML;
+    document.getElementById("change").innerHTML=doc.replace("microsoft","word");
+</script>
+<p id="num"></p>
+<script>
+    let q=8888888888888888;
+    let w=9999999999999999999;
+    document.getElementById("num").innerHTML="accq:"+q +"<br>"+"inaccq:"+w;
+</script>
+<p id="float"></p>
+<script>
+    let e=30;
+    let r=40;
+    let t="20";
+    let resultt=e+r+t;
+    document.getElementById("float").innerHTML=resultt;
+</script>
+<p id="floats"></p>
+<script>
+    let m=30;
+    let l=40;
+    let b=20;
+    document.getElementById("floats").innerHTML="result is:"+m+l+b;
+</script>
+<p id="nan"></p>
+<script>
+    document.getElementById("nan").innerHTML=1000/"Apple";
+</script>
+<p id="numb"></p>
+<script>
+    let number=2;
+    let value="";
+    while(number!=Infinity){
+        number=number*number;
+        value=value+number+"<br>";
+    }
+    document.getElementById("numb").innerHTML=value;
+</script>
+<p id="expo"></p>
+<script>
+    let g=656.4;
+    document.getElementById("expo").innerHTML=g.toExponential()+ "<br>"+
+    g.toExponential(2)+"<br>"+
+    g.toExponential(4)+"<br>"+
+    g.toExponential(6)+"<br>"+
+    g.toExponential(8)+"<br>"
+</script>
+<p id="var"></p>
+<script>
+    document.getElementById("var").innerHTML= Number(true) +"<br>"+
+    Number(false) +"<br>"+
+    Number("10") +"<br>"+
+    Number(" 10") +"<br>"+
+    Number(" 10 ") +"<br>"+
+    Number("10.3") +"<br>"+
+    Number("10,3") +"<br>"+
+    Number("10 3") +"<br>"+
+    Number("john") +"<br>"+
+    Number("john/30");
+</script>
+<p id="big"></p>
+<script>
+    let s=6n;
+    let d=3n;
+
+    let k=(s&d);
+    let j=(s|d);
+    let h=(s^d);
+    let f=(~s);
+    document.getElementById("big").innerHTML=k+","+ j+","+h+","+f;
+</script>
+<p id="func"></p>
+<script>
+    function multiply(u,i){
+        return u*i;
+    }
+    let re =multiply(4,3);
+    document.getElementById("func").innerHTML="the result is"+ re;
+
+</script>
+<p id="demo1"></p>
+<script>
+    function sayHello(){
+        return "Hello World.!"
+    }
+    document.getElementById("demo1").innerHTML=sayHello();
+</script>
+<p id="demo2"></p>
+<script>
+    function tocelsius(farenheit){
+        return(5/9)*(farenheit-32)
+    }
+    let term=tocelsius(98);
+    document.getElementById("demo2").innerHTML="The celcius is" +" "+ term;
+</script>
+<button onclick="showHello()">Click Me</button>
+<p id="demo3"></p>
+<script>
+    function sayHello(){
+        return "Hello World.!";
+    }
+    function showHello(){
+        document.getElementById("demo3").innerHTML=sayHello();
+    }
+</script>
+<p id="demo4"></p>
+<script>
+    function fullName(firstName,lastName){
+return firstName+" "+lastName;
+    }
+    let name= fullName("john","peter");
+        document.getElementById("demo4").innerHTML="Name is:"+name;
+</script>
+<p id="demo5"></p>
+<script>
+    function findMax(){
+        let max=-Infinity;
+        for(let i=0;i<arguments.length;i++){
+            if(arguments[i]>max){
+            max=arguments[i];
+        }
+    }
+return max;
+    }
+    document.getElementById("demo5").innerHTML=findMax (4,5,6,7);
+
+</script>
+<p id="demo6"></p>
+<script>
+    function sumAll(){
+        let sum=0;
+        for(let i=0;i<arguments.length;i++){
+sum+=arguments[i]
+        }
+        return sum;
+    }
+    document.getElementById("demo6").innerHTML=sumAll(100,50,30,485,20);
+</script>
+<p id="demo7"></p>
+<script>
+    const myObj={
+        firstName:"john",
+        lastName:"peter",
+        age:"20",
+         getCars: {
+            car1:"BMw",
+            car2:"AUDI",
+            car3:"SKODA"
+        }
+    }
+document.getElementById("demo7").innerHTML=myObj.getCars.car2;
+</script>
+<p id="demo8"></p>
+<script>
+    const person={
+        firstName:"Muhesh",
+        lastName:"Krishnaa",
+        age:20,
+    
+    fullName: function(){
+    return this.firstName +" "+this.lastName;
+    }
+};
+    document.getElementById("demo8").innerHTML=person.fullName();
+</script>
+<p id="demo9"></p>
+<script>
+    const person1={
+        firstName:"muhesh",
+        lastName:"krishnaa",
+    }
+        person1.name=function(){
+            return (this.firstName+" "+this.lastName).toUpperCase();
+        }
+    document.getElementById("demo9").innerHTML="The name is "+ person1.name();
+</script>
+<p id="demo10"></p>
+<script>
+    const person2={
+        name:"ajay",
+        age:25,
+        city:"coimbatore"
+    };
+    person2.age=30;
+    let text1 ="";
+    for(let x in person2){
+        text1+= person2[x]+" ";
+    };
+    
+    document.getElementById("demo10").innerHTML=text1;
+</script>
+<p id="demo11"></p>
+<script>
+    const fruits={
+        Apple:200, Orange:150, Grapes:100, Guva:120,
+    };
+    let text2="";
+    for(let [fruit,amount] of Object.entries(fruits)){
+        text2+=fruit +":"+amount+"<br>"
+    };
+    document.getElementById("demo11").innerHTML=text2;
+</script>
+<p id="demo12"></p>
+<script>
+    function Person3(first,last,age,city){
+        this.firstName=first;
+        this.lastName=last;
+        this.age=age;
+        this.city=city;
+    }
+    const myNan=new Person3("john","doe",20,"coimbatore");
+    document.getElementById("demo12").innerHTML=myNan.city;
+</script>
+<p id="demo13"></p>
+
+<script>
+
+function Person(first, last, age, eye) {
+this.firstName = first;
+this.lastName = last;
+this.age = age;
+this.eyeColor = eye;
+}
+
+
+const myFather = new Person("John", "Doe", 50, "blue");
+
+
+document.getElementById("demo13").innerHTML =myFather.eyeColor + "."; 
+</script>
+<p id="demo14"></p>
+<script>
+    function people(first,last,age,country){
+        this.firstName=first;
+        this.lastName=last;
+        this.age=age;
+        this.country=country;
+    }
+    const myName=new people("vijay","kumar",22,"india");
+    people.prototype.changeName=function(name){
+        this.lastName=name;
+    }
+    myName.changeName("raghav");
+    document.getElementById("demo14").innerHTML=myName.firstName+" "+myName.lastName;
+</script>
+<p id="demo15"></p>
+<script>
+    const D= new Date();
+document.getElementById("demo15").innerHTML=D;
+    
+</script>
+<p id="demo16"></p>
+<script>
+    const fruit=new Map([
+        ["oranges",500],
+        ["apples",700],
+        ["grapes",300],
+    ]);
+fruit.set("mangos",200);
+let numb=fruit.get("mangos");
+document.getElementById("demo16").innerHTML="there is"+numb+"mangos.";
+</script>
+<p id="demo16"></p>
+<script>
+    const fruitss=new  Map([
+        ["Apple",500],
+        ["Orange",200],
+        ["Pomo",150],
+])
+let text3="";
+fruitss.forEach(function(value,key){
+text3+=key+" "+value+"<br>";
+}
+)
+document.getElementById("demo16").innerHTML=text3;
+
+</script>
+<p id="demo17"></p>
+<script>
+    const fruits1=[
+        {name:"Apples",quantity:500},
+        {name:"Oranges",quantity:600},
+        {name:"Grapes",quantity:400},
+        {name:"Banana",quantity:550},
+        {name:"Kiwi",quantity:300}
+
+    ];
+    function myCallback({quantity}){
+        return quantity > 400 ? "ok" : "low" ;
+    }
+    const result1=Map.groupBy(fruits1,myCallback);
+
+    let text5="These fruits1 are Ok:<br>";
+    for(let x of result1.get("ok")){
+    text5 +=x.name +":"+ x.quantity+"<br>";
+    }
+
+    text5+="<br> These fruits1 are Low:<br>";
+    for(let x of result1.get("low")){
+        text5 +=x.name +":"+ x.quantity+"<br>";
+    }
+    document.getElementById("demo17").innerHTML=text5;
+
+</script>
+<p id="demo18"></p>
+<script>
+    let text4="";
+    const visitscount=new WeakMap();
+    const john={name:"john",age:18};
+    const paul={name:"paul",age:21};
+    const peter={name:"peter",age:19};
+    const harry={name:"harry",age:22};
+
+    track(paul);
+    track(john);
+    track(paul);
+    track(peter);
+    track(harry);
+    track(peter);
+    track(paul);
+
+    function track(visitor){
+        let count=visitscount.get(visitor)|| 0;
+        count++;
+        visitscount.set(visitor,count);
+        text4+= visitor.name +" , age" +visitor.age+", has visited"+ count +" ,time(s).<br>";
+    }
+    document.getElementById("demo18").innerHTML=text4;
+</script>
+<p id="demo19"></p>
+<script>
+    let X=5;
+    let Y=6;
+    let Z=6;
+
+    document.getElementById("demo19").innerHTML=(X==Y)+"<br>"+ (Y==Z);
+
+</script>
+<p id="demo20"></p>
+<script>
+    const numbers=[10,20,30,40,50,60,70];
+    const [A,B,C,...rest]=numbers;
+
+    document.getElementById("demo20").innerHTML="<p>A is " +A +
+    "<p>B is "+B+
+    "<p>C is "+C+
+    "<p>rest is "+rest;
+
+</script>
+<p id="demo21"></p>
+<script>
+    const fruitts=new Map([
+        ["Apples",500],
+        ["Oranges",200],
+        ["Grapes",300]
+
+    ])
+    let text6="";
+    for(const [value,key]of fruitts){
+    text6+=value+" is "+key+"<br>";
+    }
+    document.getElementById("demo21").innerHTML=text6;
+</script>
+<p id="demo22"></p>
+<script>
+    function myDisplayer(some){
+        document.getElementById("demo22").innerHTML+= some+" ";
+    }
+    function myFirst(){
+        myDisplayer("Hello");
+    }
+    function mySecond(){
+        myDisplayer("Good Evening");
+    }
+    myFirst();
+    mySecond();
+</script>
+<p id="demo23"></p>
+<script>
+    setInterval (myFunction,1000);
+    function myFunction(){
+        let d=new Date();
+        document.getElementById("demo23").innerHTML=
+        d.getHours()+ ":" +
+        d.getMinutes()+":"+
+        d.getSeconds();
+    }
+
+
+</script>
+    </body>
+</html>
