@@ -1,4 +1,4 @@
-/*
+
 function test(){
 
    console.log("Hello");
@@ -397,7 +397,7 @@ catch(error){
     console.log("Error Found");
 
 }
-*/
+
 
 let password = "";
 
