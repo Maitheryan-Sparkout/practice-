@@ -534,5 +534,228 @@ document.getElementById("demo16").innerHTML=text3;
 
 
 </script>
+<h1 id="count">0</h1>
+
+<button onclick="increase()">+</button>
+
+<script>
+let count = 0;
+
+function increase(){
+   count++;
+   document.getElementById("count").innerHTML = count;
+}
+</script>
+
+<input type="text" input="username">
+
+<button onclick="save()">Save</button>
+
+<script>6
+function save(){
+
+   let name = document.getElementById("username").value;
+
+   localStorage.setItem("user", name);
+}
+</script>
+<div id="parent">
+
+   <button id="child">Click</button>
+
+</div>
+
+<script>
+document.getElementById("child").onclick = function(){
+   alert("Child");
+}
+
+document.getElementById("parent").onclick = function(){
+   alert("Parent");
+}
+</script>
+<script>
+setInterval(() => {
+}, 1000);
+</script>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+
+<script>
+let c = document.getElementById("myCanvas");
+let ctx = c.getContext("2d");
+
+ctx.fillStyle = "blue";
+ctx.fillRect(50, 50, 150, 100);
+</script>
+<ol>
+    <li>Monday</li>
+    <li>Tuesday</li>
+    <li>Wednesday</li>
+    <li>Thursday</li>
+    <li>Friday</li>
+    <li>Saturday</li>
+</ol>
+
+<input type="text" id="username">
+
+    <button onclick="fillName()">
+        Fill Name
+    </button>
+
+    <script>
+
+        function fillName(){
+
+            document.getElementById("username")
+            .value = "Maithareyan";
+
+        }
+
+    </script>
+
+    <input type="text" id="user">
+    <button onclick="showValue()">
+        show
+    </button>
+    <p id="result"></p>
+    <script>
+        function showValue(){
+            let userValue=document.getElementById("user").value;
+
+            document.getElementById("result")
+            .textContent=userValue;
+        }
+    </script>
+    <ul id="list"></ul>
+<script>
+    let li=document.createElement("li");
+    li.textContent="hello";
+    document.getElementById("list").appendChild(li);
+</script>
+<script>
+     document.getElementById("user").remove();
+</script>
+<div id="parent">
+
+   <p id="child">Hello</p>
+
+</div>
+<button id="btn">submit</button>
+<script>
+    document.getElementById("btn")
+.addEventListener("mouseover", function(){
+
+   this.style.backgroundColor="red";
+
+});
+</script>
+<input type="text" id="search">
+<script>
+    document.getElementById("search")
+    .addEventListener("keyup",function(event){
+        console.log("searching for "+event.target.value);
+    });
+</script>
+<div id="parent1">
+
+   <button id="child1">Click</button>
+
+</div>
+<script>
+    document.getElementById("child1")
+.addEventListener("click", function(){
+
+   console.log("Button Clicked");
+
+});
+document.getElementById("parent1")
+.addEventListener("click", function(){
+
+   console.log("Div Clicked");
+
+});
+
+
+</script>
+<ul id="list1">
+    <li>task 1</li>
+    <li>task 2</li>
+    <li>task 3</li>
+    <li>task 4</li>
+    <li>task 5</li>
+</ul>
+<script>
+    document.getElementById("list1")
+    .addEventListener("click",function(event){
+        event.stopPropagation();
+        console.log("button clicked");
+    });
+</script>
+<div id="parent" 
+     style="padding:30px; background:lightblue;">
+
+    Parent Div
+
+    <button id="child">
+        Click Me
+    </button>
+
+</div>
+
+<div id="product">
+    <button>laptop</button>
+    <button>mobile</button>
+    <button>charger</button>
+    <button>earbuds</button>
+</div>
+<script>
+    document.getElementById("product")
+    .addEventListener("click",function(event){
+        console.log(event.target.textContent);
+    })
+</script>
+
+<a href="https://google.com" id="link">google</a>
+<script>
+    document.getElementById("link")
+    .addEventListener("click",function(event){
+        event.preventDefault();
+        console.log("link blocked");
+
+    });
+</script>
+<div id="myform">
+<button type="submit">Submit</button>
+</div>
+<script>
+    document.getElementById("myform")
+    .addEventListener("submit",function(event){
+        event.preventDefault();
+        console.log("submited");
+    });
+</script>
+
+    <form id="myForm">
+
+    <input type="text">
+
+    <button type="submit">
+        Submit
+    </button>
+
+</form>
+<script>
+    document.getElementById("myForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    console.log("Form Submitted");
+
+});
+</script>
     </body>
 </html>
+
+
+
