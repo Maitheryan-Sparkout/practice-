@@ -376,10 +376,13 @@ catch(error){
 
 try{
 
-  let JSON "name";
+  let JSON ="name";
 
 }
 catch(error){
+
+
+
 
    console.log("Invalid JSON");
 
@@ -413,3 +416,123 @@ try{
 catch(error){
     console.log(error);
 }
+
+
+
+class animal{
+    sound(){
+        console.log("animal make sound");
+    }
+}
+class dog extends animal{
+    bark(){
+        console.log("dog barks");
+    }
+}
+let d1=new dog;
+d1.sound();
+d1.bark();
+
+
+class Employee {
+
+    #salary = 50000;
+
+    showSalary() {
+        console.log(this.#salary);
+    }
+}
+
+let emp1 = new Employee();
+
+emp1.showSalary();
+
+
+class Sum{
+    static add(a,b){
+        return(a+b);
+    }
+}
+console.log(Sum.add(5,5));
+
+function greet(name) {
+
+    console.log("Hello "+ name);
+}
+
+greet("Nani");
+
+function greet(name="guvi"){
+    console.log("Hello"+ name);
+}
+greet();
+
+function processUser(callback){
+
+    console.log("Processing User");
+
+    processUser();
+
+    (function(){
+console.log("Hello");
+})();
+}
+
+let color="yellow"
+if(color==="red"){
+    console.log("Stop");
+}
+else if(color==="green"){
+    console.log("Go");
+}
+else{
+        console.log("wait");
+}
+
+
+
+let color="red"
+switch (color){
+    case "red":
+    console.log("stop");
+    break;
+
+case "green":
+    console.log("go");
+    break;
+
+    default:
+        console.log("wait");
+}
+        
+       greet();
+       greet("maithareyan");
+       function greet(name="ajay"){
+        console.log("welcome "+name);
+       }
+
+       function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.greet = function () {
+    console.log("Hello " + this.name);
+};
+
+const user1 = new Person("Maithareyan");
+
+user1.greet()
+
+let i = 1;
+
+while(i <= 5){
+    console.log(i);
+    i++;
+}
+
+let i = 1;
+
+do{
+    console.log(i);
+    i++;
+}while(i <= 5);
